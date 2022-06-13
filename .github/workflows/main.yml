@@ -37,7 +37,7 @@ jobs:
           push: true
           tags: 
             ninompit/kube-news:latest
-            ninompit/kube-news:v1
+            ninompit/kube-news:${{github.run_number}}
          
 
    
