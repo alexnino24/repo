@@ -29,15 +29,15 @@ jobs:
           username: ${{secrets.DOCKERHUB_USER}}
           password: ${{secrets.DOCKERHUB_PWD}}
          
-      -  name: Build and push Docker images
-         uses: docker/build-push-action@v3.0.0
-         with:
-           file: ./src/Dockerfile
-           context: ./src
-           push: true
-           tags: 
-             ninompit/kube-news:latest
-             ninompit/kube-news:${{github.run_number}}
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v3.0.0
+        with:
+          file: ./src/Dockerfile
+          context: ./src
+          push: true
+          tags: 
+            ninompit/kube-news:latest
+            ninompit/kube-news:${{github.run_number}}
          
 
    
